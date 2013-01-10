@@ -1,6 +1,6 @@
 //Bernice Johnson
-//VFW week 4
-//July 24, 2012
+//ASD
+//13/01
 //json file
 
 var json = {

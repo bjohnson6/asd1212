@@ -1,7 +1,7 @@
 
 // Bernice Johnson -->
-// Project 3 GOLD APP -->
-// MIU 12/10 -->
+// Project week 1 -->
+// ASD 13/01-->
 // write your javascript in here
 
 
