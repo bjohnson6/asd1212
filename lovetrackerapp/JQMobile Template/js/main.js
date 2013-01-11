@@ -67,21 +67,47 @@ var autofillData = function (){
 	 
 };
 
+$('#addamoment').on('pageinit', function(){
 var getData = function(){
+
+	function getData() {
+	toggleControls("on");
+	if(localStorage.length===0){
+		alert("There is no new Moments.");
+	}
 
 };
 
 var storeData = function(data){
 	var id =Math.floor(Math.random()*1000000001);
-	localStorage.setItem(id, JSON.stringify(data));
+	localStorage.on(id, JSON.stringify(data));
 
-	localStorage.setItem(id, JSON.stringify(data));
+	localStorage.on(id, JSON.stringify(data));
 	alert("Memory Saved!");
 	
 }; 
 
 var	deleteItem = function (){
 			
-};
+		function deleteItem(){
+	var ask = confirm("Are you sure you want to delete this moment?");
+	if(ask){
+        localStorage.removeItem(this.key);
+        alert("Moment was deleted!");
+        window.location.reload();
+	}else{
+        alert("Moment was NOT deleted.")
+	}
+}
 
-		
+function clearLocal () {
+	if(localStorage.length === 0){
+		alert("There is no data to clear.")
+	}else{
+		localStorage.clear();
+		alert("All events are deleted")
+		window.location.reload();
+		return false;
+	}
+
+}
